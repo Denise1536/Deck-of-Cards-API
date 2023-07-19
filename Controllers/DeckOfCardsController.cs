@@ -21,9 +21,9 @@ namespace Deck_of_Cards_API.Controllers
             GenerateDeck result = apiTask.Result;
 
              apiUrl = $"https://deckofcardsapi.com/api/deck/{result.deck_id}/draw/?count=5";
-            var apiTaskCard = apiUrl.GetJsonAsync<CardsApi>();
+            var apiTaskCard = apiUrl.GetJsonAsync<DrawFiveApi>();
             apiTask.Wait();
-            CardsApi resultCards = apiTaskCard.Result;
+            DrawFiveApi resultCards = apiTaskCard.Result;
 
             return View("CardsDetails", resultCards);
 
