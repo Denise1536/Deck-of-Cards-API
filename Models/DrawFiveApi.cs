@@ -6,8 +6,8 @@
 
         public string deck_id { get; set; }
 
-     //   public CardsApi cards { get; set; } 
+     
 
-        public List<CardsApi> cards_drawn { get; set; }
+        public List<CardsApi> cards { get; set; }
     }
 }
